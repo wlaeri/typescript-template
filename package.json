@@ -11,14 +11,16 @@
     "test": "jest",
     "lint": "eslint 'src/**/*.ts'",
     "lint:fix": "eslint --fix 'src/**/*.ts'",
-    "start": "ts-node ./src/index.ts"
+    "start": "ts-node ./src/index.ts",
+    "docs": "npm run docs:generate && npm run docs:open",
+    "docs:generate": "npx typedoc",
+    "docs:open": "open ./docs/index.html"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/wlaeri/typescript-template"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "Will Laeri <wlaeri@gmail.com> (https://github.com/wlaeri)",
   "license": "MIT",
   "bugs": {
@@ -37,6 +39,7 @@
     "prettier": "2.5.1",
     "ts-jest": "^27.1.2",
     "ts-node": "^10.4.0",
+    "typedoc": "^0.22.10",
     "typescript": "^4.5.4"
   },
   "jest": {
